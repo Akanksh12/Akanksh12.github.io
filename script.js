@@ -26,3 +26,7 @@ function particles() {
   });
 
 }
+
+document.querySelector('p').addEventListener('click', function(){
+  this.innerHTML = "🎂"
+})
