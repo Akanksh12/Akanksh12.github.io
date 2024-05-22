@@ -1,4 +1,4 @@
-img {
+p {
     position: absolute;
     top: 50%; 
     right: 50%;
@@ -6,4 +6,13 @@ img {
     
     padding: 0;
     margin: 0;
+    
+    text-align: center;
+    font-size: 10rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+    }
 }
