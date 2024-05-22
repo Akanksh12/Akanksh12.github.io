@@ -7,7 +7,7 @@ particles: {
  */
 
 function particles() {
-
+  console.log('particles launched')
   tsParticles.load({
     id: "tsparticles",
     options: {
@@ -16,11 +16,27 @@ function particles() {
           value: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"]
         },
       },
-      emitters: {
-        life: {
-          duration: 0,
+      emitters: [
+
+        { 
+          life: {
+            count: 0
+          }
         },
-      },
+ 
+        { 
+          life: {
+            count: 0
+          }
+        },
+ 
+        { 
+          life: {
+            count: 0
+          }
+        },
+                      
+      ],
       preset: "confetti",
     },
   });
@@ -29,4 +45,7 @@ function particles() {
 
 document.querySelector('p').addEventListener('click', function(){
   this.innerHTML = "🎂"
+  setTimeout(particles(), 0)
+  setTimeout(particles(), 0)
+  setTimeout(particles(), 0)
 })
