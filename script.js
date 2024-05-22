@@ -37,4 +37,11 @@ document.querySelector('p').addEventListener('click', function(){
     })
   }
   particles(canons)
+  document.querySelector('audio').play()
+})
+
+document.querySelector('audio').addEventListener('timeupdate', () => {
+  if (document.querySelector('audio').currentTime >= 15.25) {
+    document.querySelector('audio').currentTime = 0;
+  }
 })
