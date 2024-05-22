@@ -6,7 +6,7 @@ particles: {
   }
  */
 
-function particles() {
+function particles(canons) {
   console.log('particles launched')
   tsParticles.load({
     id: "tsparticles",
@@ -16,27 +16,7 @@ function particles() {
           value: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"]
         },
       },
-      emitters: [
-
-        { 
-          life: {
-            count: 0
-          }
-        },
- 
-        { 
-          life: {
-            count: 0
-          }
-        },
- 
-        { 
-          life: {
-            count: 0
-          }
-        },
-                      
-      ],
+      emitters: canons,
       preset: "confetti",
     },
   });
@@ -44,8 +24,17 @@ function particles() {
 }
 
 document.querySelector('p').addEventListener('click', function(){
+  document.querySelector('h1').style.display = "block";
   this.innerHTML = "🎂"
-  setTimeout(particles(), 0)
-  setTimeout(particles(), 0)
-  setTimeout(particles(), 0)
+  this.style.fontSize = "10rem"
+  let canons = []
+  for (let i = 0; i < Math.floor(Math.random() * (Math.floor(7) - Math.ceil(3)) + Math.ceil(3)); i++)
+  {
+    canons.push({
+      life: {
+        count: 0
+      }
+    })
+  }
+  particles(canons)
 })
