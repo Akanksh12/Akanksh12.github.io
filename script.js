@@ -16,6 +16,7 @@ document.addEventListener('click', function(){
     if (navigator.userActivation.isActive) {
         console.log('video is now visible')
         document.querySelector('.container').style.display = 'block'
+        document.querySelector('h1').style.display = 'none'
         document.querySelector('video').play()
     }
 }, {once: true})
