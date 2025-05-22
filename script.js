@@ -8,8 +8,9 @@ particles: {
 
 /*Date('May 23, 2024 00:00:00 GMT+00:00').getTime()*/
 let date = new Date()
-if (date.getTime() < new Date('May 23, 2024 00:00:00 GMT+01:00').getTime()){
+if (date.getTime() < new Date('May 23, 2025 00:00:00 GMT+01:00').getTime()){
     document.body.style.display = "none"
+    document.body.innerHTML = ''
 }
 
 document.addEventListener('click', function(){
