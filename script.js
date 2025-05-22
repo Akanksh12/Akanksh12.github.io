@@ -15,7 +15,7 @@ if (date.getTime() < new Date('May 23, 2024 00:00:00 GMT+01:00').getTime()){
 document.addEventListener('click', function(){
     if (navigator.userActivation.isActive) {
         console.log('video is now visible')
-        document.querySelector('video').style.display = 'block'
+        document.querySelector('.container').style.display = 'block'
         document.querySelector('video').play()
     }
 }, {once: true})
