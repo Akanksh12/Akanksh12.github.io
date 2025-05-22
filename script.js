@@ -12,11 +12,14 @@ if (date.getTime() < new Date('May 23, 2024 00:00:00 GMT+01:00').getTime()){
     document.body.style.display = "none"
 }
 
-document.querySelector('video').addEventListener('click', function() {
+document.body.addEventListener('click', function(){
     if (navigator.userActivation.isActive) {
-        document.querySelector('video').play()
+
     }
-    else {
-        console.error('User has not activated the website')
-    }
+})
+
+document.querySelector('video').addEventListener('click', function() {
+
+    // play/pause functionality without controls
+    document.querySelector('video').paused ? document.querySelector('video').play() : document.querySelector('video').pause()
 })
